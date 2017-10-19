@@ -9,8 +9,14 @@ class ListLink extends Component {
   render() {
     return (
       <li style={{ display: 'inline-block', marginRight: '1rem' }}>
-        <Link to={this.props.to}>
-          <a style={linkStyle}>{this.props.children}</a>
+        <Link
+          to={this.props.to}
+          style={{
+            textShadow: 'none',
+            backgroundImage: 'none',
+            color: 'black'
+          }}>
+          <div style={linkStyle}>{this.props.children}</div>
         </Link>
       </li>
     )
