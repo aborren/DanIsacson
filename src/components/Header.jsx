@@ -3,17 +3,25 @@ import Link from 'gatsby-link'
 import ListLink from '../components/ListLink.jsx'
 import MediaQuery from 'react-responsive'
 
+const bannerStyle = {
+  display: 'inline',
+}
+
 class Header extends Component {
   render() {
     return (
       <header style={{ marginBottom: '1.5rem' }}>
-        <Link to='/' style={{ textShadow: 'none', backgroundImage: 'none' }}>
+        <Link to='/' style={{
+          textShadow: 'none',
+          backgroundImage: 'none',
+          color: '#D46A6A'
+        }}>
           <MediaQuery minWidth={440}>
             {(matches) => {
               if (matches) {
-                return <h3 style={{ display: 'inline' }}>Dan Isacson</h3>
+                return <h3 style={bannerStyle}>Dan Isacson</h3>
               } else {
-                return <h3 style={{ display: 'inline' }}>DI</h3>
+                return <h3 style={bannerStyle}>DI</h3>
               }
             }}
           </MediaQuery>
