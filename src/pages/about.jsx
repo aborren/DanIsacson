@@ -11,7 +11,7 @@ class AboutPage extends Component {
         <h3>Why?</h3>
         <p>Because Swift is awesome.</p>
         <h3>What?</h3>
-        <p>This site is a work in progress. It is developed using <a href="https://www.gatsbyjs.org">Gatsby</a> and is hosted on <a href="https://firebase.google.com/docs/hosting/">Firebase Hosting</a>.</p>
+        <p>This site is a work in progress. It is developed using <a href="https://reactjs.org/">React</a> with <a href="https://www.gatsbyjs.org">Gatsby</a> and is hosted on <a href="https://firebase.google.com/docs/hosting/">Firebase Hosting</a>.</p>
       </div>
     )
   }

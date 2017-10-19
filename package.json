@@ -10,6 +10,7 @@
   "dependencies": {
     "gatsby": "^1.9.36",
     "gatsby-link": "^1.4.1",
-    "gatsby-plugin-typography": "^1.7.9"
+    "gatsby-plugin-typography": "^1.7.9",
+    "react-responsive": "^3.0.0"
   }
 }
