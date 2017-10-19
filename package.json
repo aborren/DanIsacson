@@ -1,6 +1,6 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "description": "Gatsby hello world starter",
+  "name": "DanIsacson",
+  "description": "Homepage for Dan Isacson.",
   "license": "MIT",
   "scripts": {
     "develop": "gatsby develop",
@@ -10,7 +10,6 @@
   "dependencies": {
     "gatsby": "^1.9.36",
     "gatsby-link": "^1.4.1",
-    "gatsby-plugin-typography": "^1.7.9",
-    "typography-theme-lincoln": "^0.15.11"
+    "gatsby-plugin-typography": "^1.7.9"
   }
 }
