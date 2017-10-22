@@ -1,17 +1,42 @@
-// Implement the Gatsby API “onCreatePage”. This is
-// called after every page is created.
-exports.onCreatePage = async ({ page, boundActionCreators }) => {
+const path = require("path")
+
+exports.createPages = async ({ page, graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators
 
   return new Promise((resolve, reject) => {
-    // If the page matches 404 (the error page) choose the error layout
-    if (page.path.match(/^\/404/)) {
-      // It's assumed that `error.js` exists in the `/layouts/` directory
-      page.layout = 'error'
-      // Update the page.
-      createPage(page)
-    }
-
-    resolve()
+    const pages = []
+    const blogPost = path.resolve("./src/templates/blog-post.jsx")
+    resolve(
+      graphql(
+      `
+      {
+        allMarkdownRemark(limit: 1000) {
+          edges {
+            node {
+              frontmatter {
+                path
+              }
+            }
+          }
+        }
+      }
+      `
+      ).then(result => {
+        if (result.errors) {
+          console.log(result.errors)
+          reject(result.errors)
+        }
+        // Create blog posts pages.
+        result.data.allMarkdownRemark.edges.map(({node}) => {
+          createPage({
+            path: node.frontmatter.path,
+            component: blogPost,
+            context: {
+              path: node.frontmatter.path,
+            },
+          })
+        })
+      })
+    )
   })
 }
