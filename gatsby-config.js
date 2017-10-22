@@ -15,6 +15,13 @@ module.exports = {
       options: {
         plugins: [
           {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+              trackingId: '',
+              anonymize: true
+            },
+          },
+          {
             resolve: `gatsby-remark-prismjs`,
             options: {
               // Class prefix for <pre> tags containing syntax highlighting;
