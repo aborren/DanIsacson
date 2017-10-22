@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Link from 'gatsby-link'
 import ListLink from '../components/ListLink.jsx'
 import MediaQuery from 'react-responsive'
+import colors from '../utils/colors'
 
 const bannerStyle = {
   display: 'inline',
@@ -14,7 +15,7 @@ class Header extends Component {
         <Link to='/' style={{
           textShadow: 'none',
           backgroundImage: 'none',
-          color: '#D46A6A'
+          color: colors.dnaPink
         }}>
           <MediaQuery minWidth={440}>
             {(matches) => {

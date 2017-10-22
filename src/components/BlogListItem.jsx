@@ -6,10 +6,11 @@ const linkStyle = {
   color: colors.dnaPink
 }
 
-class ListLink extends Component {
+class BlogListItem extends Component {
   render() {
     return (
-      <li style={{ display: 'inline-block', marginRight: '1rem' }}>
+      <li style={{ display: 'inline-block' }}>
+        <div>
         <Link
           to={this.props.to}
           style={{
@@ -17,11 +18,14 @@ class ListLink extends Component {
             backgroundImage: 'none',
             color: 'black'
           }}>
-          <div style={linkStyle}>{this.props.children}</div>
+          <div style={linkStyle}>{this.props.title}</div>
         </Link>
+        <small>{this.props.date}</small>
+        <p dangerouslySetInnerHTML={{ __html: this.props.excerpt }} />
+        </div>
       </li>
     )
   }
 }
 
-export default ListLink
+export default BlogListItem

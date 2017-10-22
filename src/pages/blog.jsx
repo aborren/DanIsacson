@@ -1,27 +1,28 @@
 import React, { Component } from 'react'
 import Link from 'gatsby-link'
+import BlogListItem from '../components/BlogListItem.jsx'
+import Helmet from 'react-helmet'
 
 class BlogPage extends Component {
   render() {
-    //const posts = get(this, props.data.allMarkdownRemark.edges)
     const posts = this.props.data.allMarkdownRemark.edges.map(post =>
-      <div key={post.node.frontmatter.path}>
-        <Link
-          style={{ boxShadow: 'none' }}
-          to={post.node.frontmatter.path}
-        >
-          {post.node.frontmatter.title}
-        </Link>
-        <small>{post.node.frontmatter.date}</small>
-        <p dangerouslySetInnerHTML={{ __html: post.node.excerpt }} />
-      </div>
+      <BlogListItem
+        key={post.node.frontmatter.path}
+        to={post.node.frontmatter.path}
+        title={post.node.frontmatter.title}
+        date={post.node.frontmatter.date}
+        excerpt={post.node.excerpt}
+      />
     )
 
     return (
       <div>
+        <Helmet title={"Blog - Dan Isacson"} />
         <h1>Blog</h1>
-        <p>Blog posts will be here!</p>
-        {posts}
+        <p>I occasionally post things related to programming and software development here. You may somtimes also find unrelated random posts!</p>
+        <ul>
+          {posts}
+        </ul>
       </div>
     )
   }

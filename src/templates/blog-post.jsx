@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Helmet from 'react-helmet'
 
 class BlogPostTemplate extends Component {
   render() {
@@ -7,9 +8,9 @@ class BlogPostTemplate extends Component {
     const date = post.date
     return (
       <div>
+        <Helmet title={title + " - Dan Isacson" || "Dan Isacson"} />
         <h1>{title}</h1>
         <small>{date}</small>
-        <p>{this.props.data.markdownRemark.id}</p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
       </div>
     )
