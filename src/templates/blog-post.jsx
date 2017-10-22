@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Helmet from 'react-helmet'
+import BlogPostFooter from '../components/BlogPostFooter'
 import colors from '../utils/colors'
 
 class BlogPostTemplate extends Component {
@@ -13,6 +14,8 @@ class BlogPostTemplate extends Component {
         <h1>{title}</h1>
         <small style={{color: colors.dnaPurple}}>{date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <hr />
+        <BlogPostFooter />
       </div>
     )
   }
