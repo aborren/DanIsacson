@@ -19,7 +19,7 @@ class BlogPostPreview extends Component {
           }}>
           <div style={linkStyle}>{this.props.title}</div>
         </Link>
-        <small>{this.props.date}</small>
+        <small style={{color: colors.dnaPurple}}>{this.props.date}</small>
         <p dangerouslySetInnerHTML={{ __html: this.props.excerpt }} />
         </div>
     )
