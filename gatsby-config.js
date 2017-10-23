@@ -11,14 +11,20 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-108480584-1',
+        anonymize: true
+      },
+    },
+    {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
           {
-            resolve: `gatsby-plugin-google-analytics`,
+            resolve: `gatsby-remark-images`,
             options: {
-              trackingId: 'UA-108480584-1',
-              anonymize: true
+              maxWidth: 590,
             },
           },
           {
@@ -34,6 +40,8 @@ module.exports = {
               classPrefix: 'language-',
             },
           },
+          "gatsby-remark-copy-linked-files",
+          "gatsby-remark-smartypants",
         ]
       }
     },
