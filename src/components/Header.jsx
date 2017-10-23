@@ -6,12 +6,15 @@ import colors from '../utils/colors'
 
 const bannerStyle = {
   display: 'inline',
+  color: 'black'  
 }
 
 class Header extends Component {
   render() {
     return (
-      <header style={{ marginBottom: '1.5rem' }}>
+      <div style={{backgroundColor: colors.dnaCyan}}>
+      <div style={{ margin: '0 auto', maxWidth: 750, padding: '1.25rem 1rem' }}>
+      <header>
         <Link to='/' style={{
           textShadow: 'none',
           backgroundImage: 'none',
@@ -37,19 +40,22 @@ class Header extends Component {
           }}
         </MediaQuery>
       </header>
+      </div>
+      </div>
     )
   }
 }
 
 const SmallList = _ =>
-  <ul style={{ listStyle: 'none', float: 'right' }}>
-    <ListLink to='/portfolio/'>P</ListLink>
-    <ListLink to='/blog/'>B</ListLink>
-    <ListLink to='/about/'>A</ListLink>
+  <ul style={{   display: 'inline',  listStyle: 'none', float: 'right' }}>
+    <ListLink to='/portfolio/'>Ptfo</ListLink>
+    <ListLink to='/blog/'>Blg</ListLink>
+    <ListLink to='/about/'>Abt</ListLink>
   </ul>
 
 const BigList = _ =>
-  <ul style={{ listStyle: 'none', float: 'right' }}>
+  <ul style={{   display: 'inline',
+  listStyle: 'none', float: 'right' }}>
     <ListLink to='/portfolio/'>Portfolio</ListLink>
     <ListLink to='/blog/'>Blog</ListLink>
     <ListLink to='/about/'>About</ListLink>

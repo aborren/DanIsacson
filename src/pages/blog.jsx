@@ -17,10 +17,10 @@ class BlogPage extends Component {
 
     return (
       <div>
-        <Helmet title={"Blog - Dan Isacson"} />
+        <Helmet title={"Dan Isacson - Blog"} />
         <h1>Blog</h1>
         <p>I occasionally post things related to programming and software development here. You may somtimes also find unrelated random posts!</p>
-        <ul>
+        <ul style={{marginLeft: 0}}>
           {posts}
         </ul>
       </div>
@@ -32,11 +32,7 @@ export default BlogPage
 
 export const pageQuery = graphql`
 query BlogPostsQuery {
-  site {
-    siteMetadata {
-      title
-    }
-  }
+
   allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
     edges {
       node {

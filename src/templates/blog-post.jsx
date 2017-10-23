@@ -10,7 +10,7 @@ class BlogPostTemplate extends Component {
     const date = post.frontmatter.date
     return (
       <div>
-        <Helmet title={title + " - Dan Isacson" || "Dan Isacson"} />
+        <Helmet title={"Dan Isacson - " + title} />
         <h1>{title}</h1>
         <small style={{color: colors.dnaPurple}}>{date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
@@ -25,11 +25,6 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
 query BlogPostByPath($path: String!) {
-  site {
-    siteMetadata {
-      title
-    }
-  }
   markdownRemark(frontmatter: { path: { eq: $path } }) {
     id
     html

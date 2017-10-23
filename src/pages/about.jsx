@@ -10,7 +10,7 @@ class AboutPage extends Component {
   render() {
     return (
       <div>
-        <Helmet title={"About - Dan Isacson"} />
+        <Helmet title={"Dan Isacson - About"} />
         <h1>About</h1>
         <p>This is a developer's portfolio and blog.</p>
         <h3>Who?</h3>
