@@ -18,10 +18,12 @@ class BlogPage extends Component {
 
     return (
       <div>
-        <Helmet title={"Dan Isacson - Blog"} />
+        <Helmet title={"Dan Isacson - Blog"}>
+          <meta name="description" content="Dan Isacson's blog" />
+        </Helmet>
         <h1>Blog</h1>
         <p>I occasionally post things related to programming and software development here. You may somtimes also find unrelated random posts!</p>
-        <ul style={{marginLeft: 0}}>
+        <ul style={{ marginLeft: 0 }}>
           {posts}
         </ul>
       </div>

@@ -10,7 +10,9 @@ class BlogPostTemplate extends Component {
     const date = post.frontmatter.date
     return (
       <div>
-        <Helmet title={"Dan Isacson - " + title} />
+        <Helmet title={"Dan Isacson - " + title}>          
+          <meta name="description" content={title + " by Dan Isacson"} />
+        </Helmet>
         <h1>{title}</h1>
         <small style={{color: colors.dnaPurple}}>{date}</small>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
