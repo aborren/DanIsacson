@@ -9,7 +9,7 @@ const linkStyle = {
 class ListLink extends Component {
   render() {
     return (
-      <li style={{ display: 'inline-block', marginRight: '1rem' }}>
+      <li style={{ display: 'inline-block', marginLeft: '1rem' }}>
         <div style={linkStyle}>
           <Link
             to={this.props.to}
