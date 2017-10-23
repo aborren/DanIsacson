@@ -16,6 +16,7 @@ class IndexPage extends Component {
           title={latestPost.frontmatter.title}
           date={latestPost.frontmatter.date}
           excerpt={latestPost.excerpt}
+          timeToRead={latestPost.timeToRead}
         />
       </div>
     )
@@ -30,6 +31,7 @@ query IndexPageQuery {
     edges {
       node {
         excerpt
+        timeToRead
         frontmatter {
           title
           path

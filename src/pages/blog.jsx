@@ -12,6 +12,7 @@ class BlogPage extends Component {
         title={post.node.frontmatter.title}
         date={post.node.frontmatter.date}
         excerpt={post.node.excerpt}
+        timeToRead={post.node.timeToRead}
       />
     )
 
@@ -37,6 +38,7 @@ query BlogPostsQuery {
     edges {
       node {
         excerpt
+        timeToRead
         frontmatter {
           title
           path
