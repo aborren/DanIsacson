@@ -3,7 +3,7 @@ import Link from 'gatsby-link'
 import colors from '../utils/colors'
 
 const linkStyle = {
-  color: colors.dnaPink
+  color: colors.dnaDark
 }
 
 class BlogListItem extends Component {

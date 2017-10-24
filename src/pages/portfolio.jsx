@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import colors from '../utils/colors'
 
 const linkStyle = {
-  color: colors.dnaPink
+  color: colors.dnaDark
 }
 
 class PortfolioPage extends Component {

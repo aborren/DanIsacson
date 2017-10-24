@@ -18,7 +18,7 @@ class Header extends Component {
         <Link to='/' style={{
           textShadow: 'none',
           backgroundImage: 'none',
-          color: colors.dnaPink
+          color: 'black'
         }}>
           <MediaQuery minWidth={440}>
             {(matches) => {
