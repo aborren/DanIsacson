@@ -5,6 +5,7 @@ import ContentContainer from '../components/ContentContainer.jsx'
 import Footer from '../components/Footer.jsx'
 import _ from 'prismjs/themes/prism-okaidia.css'
 import colors from '../utils/colors'
+import "./index.css";
 
 class Layout extends Component {
   render() {
