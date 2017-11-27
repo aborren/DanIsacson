@@ -23,7 +23,7 @@ class Header extends Component {
               backgroundImage: 'none',
               color: 'white'
             }}>
-              <h3 style={bannerStyle}>DI </h3>
+              <h3 style={bannerStyle}>DI</h3>
             </Link>
             <MediaQuery minWidth={320}>
               {(matches) => {
