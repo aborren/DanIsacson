@@ -42,7 +42,7 @@ class Header extends Component {
 }
 
 const SmallList = _ =>
-  <ul style={{ display: 'inline', listStyle: 'none', float: 'right' }}>
+  <ul style={{ display: 'inline', listStyle: 'none', float: 'right', margin: '0' }}>
     <ListLink to='/portfolio/'>Ptfo</ListLink>
     <ListLink to='/blog/'>Blg</ListLink>
     <ListLink to='/about/'>Abt</ListLink>
@@ -51,7 +51,8 @@ const SmallList = _ =>
 const BigList = _ =>
   <ul style={{
     display: 'inline',
-    listStyle: 'none', float: 'right'
+    listStyle: 'none', float: 'right',
+    margin: '0' 
   }}>
     <ListLink to='/portfolio/'>Portfolio</ListLink>
     <ListLink to='/blog/'>Blog</ListLink>
