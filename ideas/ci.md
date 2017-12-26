@@ -1,8 +1,4 @@
----
-title: Continuous Integration on Gitlab
-date: "2017-11-08" 
-path: "/posts/terminal-xcode/" 
----
+
 
 1, create new gitlab project
 add one test : make it fail
